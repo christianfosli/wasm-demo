@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+</head>
+
+<body>
+  <button>Talk to rust</button>
+
+  <script type="module">
+    import init, {greet} from './pkg/wasm_demo.js';
+
+    async function run() {
+      await init();
+      document.querySelector('button').addEventListener('click', greet);
+    }
+
+    run();
+  </script>
+</body>
+
+</html>
